@@ -1,11 +1,13 @@
 .App {
   text-align: center;
-  background-color: #2b3784;
+  background-color: #1f0404;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: rgb(173, 190, 19);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
 }
 

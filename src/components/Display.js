@@ -31,7 +31,8 @@ const Display = () => {
       <div>
         <div>
           <div>
-            <h1 className="NamePlate">CALCULADORA</h1>
+            <h1>CALCULADORA</h1>
+            <h2 className="name">THE APP WITHOUT FEAR</h2>
             <hr />
           </div>
         </div>
@@ -92,8 +93,6 @@ const Display = () => {
                 <Button value="=" onClick={calculate} />
               </div> 
             </div>
-              
-              
             </div>
           </div>
         </div>

@@ -2,8 +2,6 @@
 .MainButton{
     display: flex;
     align-items: center;
-    justify-content: center;
-    vertical-align: middle;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -16,8 +14,6 @@
 .OpButton{
     display: flex;
     align-items: center;
-    justify-content: center;
-    vertical-align: middle;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -30,7 +26,6 @@
 .MButton{
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -42,4 +37,10 @@
 
 .ButtonContainer {
     display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
   }
+
+.name{
+    font-size: small;
+}
