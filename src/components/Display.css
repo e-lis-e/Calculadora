@@ -1,7 +1,7 @@
-
-.MainButton{
+.MainButton {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -9,7 +9,8 @@
     cursor: pointer;
     font-size: 16px;
     color: #b11313;
-}
+    background-color: rgb(173, 190, 19);
+  }
 
 .OpButton{
     display: flex;
@@ -44,3 +45,16 @@
 .name{
     font-size: small;
 }
+
+.App {
+    text-align: center;
+    background-color: #1f0404;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(173, 190, 19);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+  }

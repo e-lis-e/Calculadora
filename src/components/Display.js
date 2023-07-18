@@ -2,10 +2,11 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import "./Display.css";
+import CalculatorButton from "./Button";
 
 const Display = () => {
   const [val, setVal] = useState("");
-  const [memo, setMemo] = useState(0)
+  const [memo, setMemo] = useState(0);
 
   const backspace = () => {
     try {
@@ -27,29 +28,26 @@ const Display = () => {
     setVal(val + e.target.value);
   };
 
-  const memoClear= () => {
+  const memoClear = () => {
     setMemo(0);
   };
 
-  const memoRecall= () => {
+  const memoRecall = () => {
     setVal(memo.toString());
-
   };
 
-  const memoAdd= () => {
+  const memoAdd = () => {
     const n = parseFloat(val);
     setMemo(memo + n);
-
   };
 
-  const memoSub= () => {
+  const memoSub = () => {
     const n = parseFloat(val);
     setMemo(memo - n);
-
   };
 
   return (
-    <div>
+    <div className="App">
       <div>
         <div>
           <div>
@@ -70,51 +68,51 @@ const Display = () => {
               </div>
               <div className="ButtonContainer">
                 <div className="MButton">
-                  <Button value="MC" onClick={memoClear}/>
-                  <Button value="MR" onClick={memoRecall}/>
-                  <Button value="M+" onClick={memoAdd}/>
-                  <Button value="M-" onClick={memoSub}/>
+                  <CalculatorButton value="MC" onClick={memoClear} />
+                  <CalculatorButton value="MR" onClick={memoRecall} />
+                  <CalculatorButton value="M+" onClick={memoAdd} />
+                  <CalculatorButton value="M-" onClick={memoSub} />
                 </div>
               </div>
               <div className="ButtonContainer">
-                <div className="MainButton">
-                <Button value="1" onClick={handleButtonClick} />
-                <Button value="2" onClick={handleButtonClick} />
-                <Button value="3" onClick={handleButtonClick} />
-              </div>    
-            </div>
-            <div className="ButtonContainer">
-                <div className="MainButton">
-                <Button value="4" onClick={handleButtonClick} />
-                <Button value="5" onClick={handleButtonClick} />
-                <Button value="6" onClick={handleButtonClick} />
-              </div>    
-            </div>
-            <div className="ButtonContainer">
-               <div className="MainButton">
-                <Button value="7" onClick={handleButtonClick} />
-                <Button value="8" onClick={handleButtonClick} />
-                <Button value="9" onClick={handleButtonClick} />
-              </div>     
-            </div>
-            <div className="ButtonContainer">
-            <div className="OpButton">
-                <Button value="+" onClick={handleButtonClick} />
-                <Button value="*" onClick={handleButtonClick} />
-                <Button value="." onClick={handleButtonClick} />
-                <Button value="/" onClick={handleButtonClick} />
-                </div>    
-            </div>
-            <div className="ButtonContainer">
-               <div className="MainButton">
-                <Button value="0" onClick={handleButtonClick} />
+                <div className="MButton">
+                  <CalculatorButton value="1" onClick={handleButtonClick} />
+                  <CalculatorButton value="2" onClick={handleButtonClick} />
+                  <CalculatorButton value="3" onClick={handleButtonClick} />
+                </div>
               </div>
-              <div className="OpButton">
-                <Button value="C" onClick={backspace} />
-                <Button value="-" onClick={handleButtonClick} />
-                <Button value="=" onClick={calculate} />
-              </div> 
-            </div>
+              <div className="ButtonContainer">
+                <div className="MButton">
+                  <CalculatorButton value="4" onClick={handleButtonClick} />
+                  <CalculatorButton value="5" onClick={handleButtonClick} />
+                  <CalculatorButton value="6" onClick={handleButtonClick} />
+                </div>
+              </div>
+              <div className="ButtonContainer">
+                <div className="MButton">
+                  <CalculatorButton value="7" onClick={handleButtonClick} />
+                  <CalculatorButton value="8" onClick={handleButtonClick} />
+                  <CalculatorButton value="9" onClick={handleButtonClick} />
+                </div>
+              </div>
+              <div className="ButtonContainer">
+                <div className="OpButton">
+                  <CalculatorButton value="+" onClick={handleButtonClick} />
+                  <CalculatorButton value="*" onClick={handleButtonClick} />
+                  <CalculatorButton value="." onClick={handleButtonClick} />
+                  <CalculatorButton value="/" onClick={handleButtonClick} />
+                </div>
+              </div>
+              <div className="ButtonContainer">
+                <div className="MButton">
+                  <CalculatorButton value="0" onClick={handleButtonClick} />
+                </div>
+                <div className="OpButton">
+                  <CalculatorButton value="C" onClick={backspace} />
+                  <CalculatorButton value="-" onClick={handleButtonClick} />
+                  <CalculatorButton value="=" onClick={calculate} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
