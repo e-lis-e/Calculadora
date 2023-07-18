@@ -5,6 +5,7 @@ import "./Display.css";
 
 const Display = () => {
   const [val, setVal] = useState("");
+  const [memo, setMemo] = useState(0)
 
   const backspace = () => {
     try {
@@ -24,6 +25,27 @@ const Display = () => {
 
   const handleButtonClick = (e) => {
     setVal(val + e.target.value);
+  };
+
+  const memoClear= () => {
+    setMemo(0);
+  };
+
+  const memoRecall= () => {
+    setVal(memo.toString());
+
+  };
+
+  const memoAdd= () => {
+    const n = parseFloat(val);
+    setMemo(memo + n);
+
+  };
+
+  const memoSub= () => {
+    const n = parseFloat(val);
+    setMemo(memo - n);
+
   };
 
   return (
@@ -48,10 +70,10 @@ const Display = () => {
               </div>
               <div className="ButtonContainer">
                 <div className="MButton">
-                  <Button value="MC" />
-                  <Button value="MR" />
-                  <Button value="M+" />
-                  <Button value="M-" />
+                  <Button value="MC" onClick={memoClear}/>
+                  <Button value="MR" onClick={memoRecall}/>
+                  <Button value="M+" onClick={memoAdd}/>
+                  <Button value="M-" onClick={memoSub}/>
                 </div>
               </div>
               <div className="ButtonContainer">
